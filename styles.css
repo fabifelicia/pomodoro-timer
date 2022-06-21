@@ -70,6 +70,13 @@ button:last-child {
   border-top: none;
 }
 
+button:hover {
+  font-size: 2rem;
+}
+
+button:focus {
+  outline: none;
+}
 
 
 
