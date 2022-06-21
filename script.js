@@ -18,8 +18,11 @@ function startTimer(duration, display) {
     display.textContent = ''
     display.textContent = minutes + ":" + seconds;
 
-    if (--timer < 0) {
+    if (--timer < 0) {      
       timer = duration;
+      const audio = document.getElementById('audio')
+      audio.play()
+      
     }
   }, 1000)
 }
@@ -33,6 +36,7 @@ stopButton.addEventListener('click',() => {
 })
 
 shortBreakButton.addEventListener('click',() => {
+  
   startTimer(5 * 60, element);
 })
 
